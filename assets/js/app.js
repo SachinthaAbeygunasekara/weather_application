@@ -181,6 +181,13 @@ async function updateCityImage(city) {
     }
 }
 
+document.getElementById("searchInput").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        loadWeather(this.value);
+        this.blur();
+    }
+});
+
 function getLucideIcon(conditionText) {
     conditionText = conditionText.toLowerCase();
 
