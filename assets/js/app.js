@@ -188,6 +188,11 @@ document.getElementById("searchInput").addEventListener("keypress", function (e)
     }
 });
 
+document.getElementById("clearSearch").addEventListener("click", function () {
+    document.getElementById("searchInput").value = "";
+    loadWeather("Colombo");
+});
+
 function getLucideIcon(conditionText) {
     conditionText = conditionText.toLowerCase();
 
