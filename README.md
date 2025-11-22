@@ -1,78 +1,126 @@
+# 🌦️ Weather App
+A modern, interactive **7-day weather forecast application** built with HTML, CSS, JavaScript, Leaflet Maps, Bootstrap, and multiple APIs. Beautiful animations, dynamic city images, and detailed weather metrics make this app both visually appealing and highly functional.
 
-# Weather App
+## 🏷️ Tech Stack Badges
+<p align="left">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white">
+  <img src="https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=leaflet&logoColor=white">
+</p>
 
-A simple and responsive weather application built with HTML, CSS, and JavaScript, designed to provide users with real-time weather updates. This application fetches data from a weather API, allowing users to view current weather conditions, temperature, and other related details for their location or any other city. 
+## ✨ Features
+### 🔍 Smart City Search
+- Search weather for any city worldwide
+- Clear search button resets to default city
+- Smooth & instant UI updates
 
+### 🌡️ Real-Time Weather Overview
+- Current temperature
+- Weather condition text
+- Animated icon
+- Chance of rain
+- Live date & time (updates every second)
 
+### 🖼️ Dynamic City Images
+- City photo fetched automatically from Pixabay
+- Smooth fade-in animation
+- Loading spinner
+- Fallback image included
 
-## Features
+### 📅 7-Day Forecast
+- Day name
+- Lucide weather icons
+- Max / Min temperature
 
-- **Real-Time Weather Updates**: Provides up-to-date weather information based on the user's current location or a searched city.
-- **Dynamic Backgrounds**: Changes the background based on weather conditions to give a more immersive experience.
-- **Responsive Design**: Optimized for both desktop and mobile devices, making it easy to use on the go.
-- **Location Detection**: Option to auto-detect the user’s location for quick access to local weather.
-- **Customizable Search**: Allows users to search weather data by entering any city.
+### 🌤️ Detailed Highlights Section
+Includes:
+- UV Index (with color-coded circular bar)
+- Humidity + status
+- Wind speed & direction
+- Visibility
+- Air Quality Index (EPA standard + status + dynamic icon)
+- Sunrise & Sunset times with animated glowing icons
 
-## Live Demo
-Check out the deployed app here.<a href="">Deploy Link</a>
+### 🗺️ Interactive Map
+- Built with Leaflet.js
+- Automatically centers on searched location
+- Marker updates dynamically
+- Smooth resizing and zooming
 
-<br>
+### 📱 Fully Responsive UI
+- Mobile-first design
+- Improved layout for smaller screens
+- Glassmorphism panels
+- Background video
+- Smooth animations
 
-## Screenshots
+## 🚀 Live Demo
+👉 **[Click here to view the live demo](#)**
 
+## 📁 Project Structure
+```
+weather-app/
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── app.js
+│   ├── images/
+│   │   ├── side_image.png
+│   │   └── no-image-available.jpg
+│   └── videos/
+│       └── background.mp4
+├── index.html
+└── README.md
+```
 
+## 🧠 Usage
+- Enter a **city name** and press **Enter**
+- View the full weather dashboard for that location
+- Map will automatically reposition to the selected city
+- Clear button resets search to **Colombo**
 
+## 🛠️ Technologies Used
+- HTML5 – Structure
+- CSS3 – UI design, animation, responsiveness
+- JavaScript (ES6+) – Logic, API handling, interactions
+- Bootstrap 5 – Layout & components
+- Leaflet.js + OpenStreetMap – Interactive map
+- WeatherAPI – Weather + AQI data
+- Pixabay API – Dynamic city images
+- Lucide Icons – Vector weather icons
 
-<br>
+## 🔌 API Setup (Required)
+### 1️⃣ WeatherAPI
+- Create an account
+- Generate API key
+- Insert it into `app.js`:
+```js
+const API_KEY = "YOUR_WEATHER_API_KEY_HERE";
+```
+### 2️⃣ Pixabay API
+- Create free key
+- Insert it:
+```js
+const PIXABAY_KEY = "YOUR_PIXABAY_KEY_HERE";
+```
 
-## Installation
+## 🌱 Future Enhancements
+- Hourly weather charts
+- Dark/Light theme toggle
+- Favorite cities
+- Weather notifications
+- Multi-language support
+- Animated forecast icons
 
-1. **Clone the Repository**  
-   Clone the project to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/weather-app.git
-   ```
-   
-2. **Open in Browser**  
-   Navigate to the project directory and open `index.html` in your preferred browser to launch the app.
+## 🤝 Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Commit and push
+4. Open a pull request
 
-## Usage
-
-- **View Local Weather**: Upon loading, the app prompts to use your current location to display the local weather.
-- **Search by City**: Type a city name in the search box to retrieve and display the weather data for that location.
-- **Check Conditions**: The app displays current temperature, weather description (e.g., sunny, rainy), and a dynamic background that matches the weather conditions.
-
-## Technologies Used
-
-- **HTML**: For the basic structure and layout of the app.
-- **CSS**: Provides styling and ensures a responsive design.
-- **JavaScript**: Handles API requests and dynamically updates the UI based on user input.
-- **Weather API**: Fetches real-time weather data from an external API.
-
-## API Integration
-
-The app connects to a weather API to retrieve live weather data based on user location or input. If you want to try this with a specific API (like OpenWeatherMap or WeatherAPI), you'll need to:
-
-1. Sign up for an API key from the provider's website.
-2. Include this API key in the JavaScript code in `script.js` where the API call is made.
-
-Make sure to follow the API documentation for any specific requirements or limitations.
-
-## Future Enhancements
-
-- **Extended Forecast**: Add a 5- or 7-day weather forecast feature.
-- **Weather Metrics**: Display additional metrics like wind speed, humidity, and sunrise/sunset times.
-- **Multiple Languages**: Support for multiple languages for a broader audience.
-- **Improved UI**: Potential to include themes or customization options for users.
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for any feature or enhancement (`git checkout -b feature-name`).
-3. Commit changes and open a pull request with a description of what was changed.
-
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for details.
+## 📜 License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
