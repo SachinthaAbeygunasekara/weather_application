@@ -3,7 +3,7 @@ const PIXABAY_KEY = "53349822-c3cff7e738366084afc3f9a6e";
 const DEFAULT_CITY_IMG = "assets/images/no-image-available.jpg";
 
 function loadWeather(city) {
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&aqi=yes`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&aqi=yes`)
         .then(response => response.json())
         .then(data => {
             updateUI(data);
