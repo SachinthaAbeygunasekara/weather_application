@@ -181,6 +181,18 @@ async function updateCityImage(city) {
     }
 }
 
+document.getElementById("searchInput").addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+        loadWeather(this.value);
+        this.blur();
+    }
+});
+
+document.getElementById("clearSearch").addEventListener("click", function () {
+    document.getElementById("searchInput").value = "";
+    loadWeather("Colombo");
+});
+
 function getLucideIcon(conditionText) {
     conditionText = conditionText.toLowerCase();
 
