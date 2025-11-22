@@ -56,8 +56,13 @@ Includes:
 - Background video
 - Smooth animations
 
+## 📸 Screenshot
+<img width="1902" height="910" alt="image" src="https://github.com/user-attachments/assets/3d5a8e69-cebf-4fb5-9479-2a5e2516a21f" />
+
+---
+
 ## 🚀 Live Demo
-👉 **[Click here to view the live demo](#)**
+👉 **[[Click here to view the live demo](https://sachinthaabeygunasekara.github.io/weather_application/)](#)**
 
 ## 📁 Project Structure
 ```
@@ -122,5 +127,3 @@ const PIXABAY_KEY = "YOUR_PIXABAY_KEY_HERE";
 3. Commit and push
 4. Open a pull request
 
-## 📜 License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
