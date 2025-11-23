@@ -3,12 +3,16 @@ const PIXABAY_KEY = "53349822-c3cff7e738366084afc3f9a6e";
 const DEFAULT_CITY_IMG = "assets/images/no-image-available.jpg";
 
 function loadWeather(city) {
+    showSearchLoader();
     fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&aqi=yes`)
         .then(response => response.json())
         .then(data => {
             updateUI(data);
         })
-        .catch(error => console.error("Error fetching weather:", error));
+        .catch(error => console.error("Error fetching weather:", error))
+        .finally(() => {
+            hideSearchLoader();
+        });
 }
 
 function updateUI(data) {
@@ -188,8 +192,14 @@ document.getElementById("searchInput").addEventListener("keypress", function (e)
     }
 });
 
+// document.getElementById("clearSearch").addEventListener("click", function () {
+//     document.getElementById("searchInput").value = "";
+//     loadWeather("Colombo");
+// });
+
 document.getElementById("clearSearch").addEventListener("click", function () {
     document.getElementById("searchInput").value = "";
+    hideSearchLoader();
     loadWeather("Colombo");
 });
 
@@ -298,4 +308,14 @@ function isZoomedOut() {
     } catch (e) { }
 
     return false;
+}
+
+function showSearchLoader() {
+    document.getElementById("searchLoader").style.display = "block";
+    document.getElementById("clearSearchIcon").style.display = "none";
+}
+
+function hideSearchLoader() {
+    document.getElementById("searchLoader").style.display = "none";
+    document.getElementById("clearSearchIcon").style.display = "inline-block";
 }
