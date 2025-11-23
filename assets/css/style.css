@@ -419,3 +419,27 @@ input.form-control::placeholder {
         margin-top: 6px;
     }
 }
+
+/* wrapper handles position only, no rotation here */
+.searchLoaderWrapper {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* spinner handles ONLY rotation */
+#searchLoader {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin-clockwise 0.75s linear infinite;
+}
+
+/* rotation animation */
+@keyframes spin-clockwise {
+    to { transform: rotate(360deg); }
+}

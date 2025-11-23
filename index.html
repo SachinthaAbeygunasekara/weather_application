@@ -43,8 +43,13 @@
                         </span>
                         <input id="searchInput" class="form-control no-right-border search-bar" type="search"
                             placeholder="Search Places">
-                        <span id="clearSearch" class="input-group-text no-left-border">
-                            <i class="bi bi-x-circle"></i>
+                        <span id="clearSearch" class="input-group-text no-left-border position-relative"
+                            style="width: 40px;">
+                            <i id="clearSearchIcon" class="bi bi-x-circle"></i>
+                            <!-- NEW: wrapper -->
+                            <div class="searchLoaderWrapper">
+                                <div id="searchLoader"></div>
+                            </div>
                         </span>
                     </div>
 
